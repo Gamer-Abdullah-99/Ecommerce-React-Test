@@ -19,31 +19,31 @@ const App: React.FC = () => {
   const [products] = useState<Product[]>([
     {
       id: 1,
-      title: "Product 1",
-      description: "This is product 1.",
+      title: "Cosmic Lamp",
+      description: "Illuminate your space with cosmic vibes.",
       price: 29.99,
-      imageUrl: "https://picsum.photos/seed/1/300/200",
+      imageUrl: "https://picsum.photos/seed/cosmic1/300/200",
     },
     {
       id: 2,
-      title: "Product 2",
-      description: "This is product 2.",
+      title: "Galactic Chair",
+      description: "Sit back and relax in a galactic atmosphere.",
       price: 39.99,
-      imageUrl: "https://picsum.photos/seed/2/300/200",
+      imageUrl: "https://picsum.photos/seed/cosmic2/300/200",
     },
     {
       id: 3,
-      title: "Product 3",
-      description: "This is product 3.",
+      title: "Nebula Clock",
+      description: "Time flies in a nebula of creativity.",
       price: 19.99,
-      imageUrl: "https://picsum.photos/seed/3/300/200",
+      imageUrl: "https://picsum.photos/seed/cosmic3/300/200",
     },
     {
       id: 4,
-      title: "Product 4",
-      description: "This is product 4.",
+      title: "Stellar Vase",
+      description: "A vase that holds the beauty of the stars.",
       price: 49.99,
-      imageUrl: "https://picsum.photos/seed/4/300/200",
+      imageUrl: "https://picsum.photos/seed/cosmic4/300/200",
     },
   ]);
 
@@ -65,7 +65,9 @@ const App: React.FC = () => {
   };
 
   const removeFromCart = (productId: number) => {
-    setCartItems((prevItems) => prevItems.filter((item) => item.product.id !== productId));
+    setCartItems((prevItems) =>
+      prevItems.filter((item) => item.product.id !== productId)
+    );
   };
 
   const increaseQuantity = (productId: number) => {
@@ -89,9 +91,9 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      <header className="bg-blue-600 text-white p-4">
-        <h1 className="text-xl font-semibold">E-Commerce Store</h1>
+    <div className="min-h-screen bg-gradient-to-b from-black to-purple-900 text-white">
+      <header className="bg-gradient-to-r from-purple-800 to-blue-900 p-4">
+        <h1 className="text-2xl font-semibold">Cosmic E-Commerce Store</h1>
       </header>
       <main className="container mx-auto p-4">
         <div className="flex flex-col lg:flex-row gap-4">
@@ -108,8 +110,8 @@ const App: React.FC = () => {
           </div>
         </div>
       </main>
-      <footer className="bg-blue-600 text-white p-4 text-center">
-        <p>&copy; 2023 E-Commerce Store</p>
+      <footer className="bg-gradient-to-r from-blue-900 to-purple-800 p-4 text-center">
+        <p>&copy; 2023 Cosmic E-Commerce Store</p>
       </footer>
     </div>
   );
